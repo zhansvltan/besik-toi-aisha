@@ -22,6 +22,7 @@ export function InvitationCard() {
         }`}
       >
         <span className={faceClass}>
+          <div></div>
           <span className="flex flex-col items-end text-[#5F3436]">
             <p className="text-end m-0 [font-family:var(--font-cormorant-infant)] text-[48px] font-light uppercase leading-[0.92] tracking-normal md:text-[80px]">
               ҚЫЗ ҰЗАТУ
