@@ -11,7 +11,7 @@ export function InvitationCard() {
   return (
     <button
       type="button"
-      className="relative z-20 w-full h-full cursor-pointer border-0 bg-transparent px-8 py-42 md:p-0 [perspective:1600px] [-webkit-tap-highlight-color:transparent] md:h-[min(max(45vw,63.2813dvh),calc(100dvh-32px))] md:w-[min(max(53.4722vw,75.1953dvh),calc(100vw-32px))]"
+      className="relative z-20 w-full h-full cursor-pointer border-0 bg-transparent px-8 py-32 md:p-0 [perspective:1600px] [-webkit-tap-highlight-color:transparent] md:h-[min(max(45vw,63.2813dvh),calc(100dvh-32px))] md:w-[min(max(53.4722vw,75.1953dvh),calc(100vw-32px))]"
       aria-pressed={isOpen}
       aria-label={isOpen ? "Жабу" : "Шақыруды ашу"}
       onClick={() => setIsOpen((value) => !value)}
