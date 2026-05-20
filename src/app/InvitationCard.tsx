@@ -11,7 +11,7 @@ export function InvitationCard() {
   return (
     <button
       type="button"
-      className="relative z-20 h-[min(max(102.338vw,57.619dvh),calc(100dvh-32px))] w-[min(max(68.296vw,38.452dvh),calc(100vw-32px))] cursor-pointer border-0 bg-transparent p-0 [perspective:1600px] [-webkit-tap-highlight-color:transparent] md:h-[min(max(45vw,63.2813dvh),calc(100dvh-32px))] md:w-[min(max(53.4722vw,75.1953dvh),calc(100vw-32px))]"
+      className="relative z-20 w-full h-full cursor-pointer border-0 bg-transparent px-8 py-42 md:p-0 [perspective:1600px] [-webkit-tap-highlight-color:transparent] md:h-[min(max(45vw,63.2813dvh),calc(100dvh-32px))] md:w-[min(max(53.4722vw,75.1953dvh),calc(100vw-32px))]"
       aria-pressed={isOpen}
       aria-label={isOpen ? "Жабу" : "Шақыруды ашу"}
       onClick={() => setIsOpen((value) => !value)}
@@ -26,7 +26,7 @@ export function InvitationCard() {
             <p className="text-end m-0 [font-family:var(--font-cormorant-infant)] text-[48px] font-light uppercase leading-[0.92] tracking-normal md:text-[80px]">
               ҚЫЗ ҰЗАТУ
             </p>
-            <p className="m-0 -mt-8 pr-2 text-[#921512] [font-family:var(--font-bickham-script)] text-[76px] font-normal leading-[0.92] tracking-normal md:text-[128px] md:-mt-14 md:pr-4">
+            <p className="m-0 -mt-8 pr-2 text-[#921512] [font-family:var(--font-bickham-script)] text-[80px] font-normal leading-[0.92] tracking-normal md:text-[128px] md:-mt-14 md:pr-4">
               Аружан
             </p>
           </span>
