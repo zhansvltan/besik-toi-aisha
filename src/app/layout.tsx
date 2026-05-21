@@ -52,7 +52,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/uzatu-background.webp"
+          href="/desktop-background.webp"
           media="(min-width: 768px)"
         />
       </head>
