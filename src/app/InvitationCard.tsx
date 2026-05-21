@@ -19,7 +19,7 @@ export function InvitationCard() {
   }, []);
 
   const fadeInAudio = (audio: HTMLAudioElement) => {
-    const targetVolume = 0.65;
+    const targetVolume = 0.45;
     const duration = 2200;
     const startedAt = performance.now();
 
