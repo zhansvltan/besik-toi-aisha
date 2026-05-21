@@ -28,8 +28,6 @@ const bickhamScript = localFont({
 
 export const metadata: Metadata = {
   title: "Аружан - Ұзату той",
-  description:
-    "Құрметті қонақ, сізді қызымыз Аружанның ұзату тойына шақырамыз!",
 };
 
 export default function RootLayout({
