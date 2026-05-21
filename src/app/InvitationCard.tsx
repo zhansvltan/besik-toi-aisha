@@ -1,13 +1,48 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function InvitationCard() {
   const [isOpen, setIsOpen] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const fadeFrameRef = useRef<number | null>(null);
 
   const faceClass =
     "absolute inset-0 grid place-items-center overflow-hidden rounded-[28px] bg-[#FFFFF9] shadow-[0_4px_4px_rgba(0,0,0,0.25),0_4px_8.5px_rgba(0,0,0,0.25)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]";
+
+  useEffect(() => {
+    return () => {
+      if (fadeFrameRef.current !== null) {
+        cancelAnimationFrame(fadeFrameRef.current);
+      }
+    };
+  }, []);
+
+  const fadeInAudio = (audio: HTMLAudioElement) => {
+    const targetVolume = 0.65;
+    const duration = 2200;
+    const startedAt = performance.now();
+
+    if (fadeFrameRef.current !== null) {
+      cancelAnimationFrame(fadeFrameRef.current);
+    }
+
+    const step = (timestamp: number) => {
+      const progress = Math.min((timestamp - startedAt) / duration, 1);
+
+      audio.volume = targetVolume * progress;
+
+      if (progress < 1) {
+        fadeFrameRef.current = requestAnimationFrame(step);
+        return;
+      }
+
+      fadeFrameRef.current = null;
+    };
+
+    audio.volume = 0;
+    fadeFrameRef.current = requestAnimationFrame(step);
+  };
 
   const handleCardClick = () => {
     setIsOpen((value) => !value);
@@ -18,8 +53,8 @@ export function InvitationCard() {
       return;
     }
 
-    audio.volume = 0.65;
-    void audio.play().catch(() => {});
+    audio.volume = 0;
+    void audio.play().then(() => fadeInAudio(audio)).catch(() => {});
   };
 
   return (
