@@ -46,13 +46,13 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/mobile-background.webp"
+          href="/mobile-bg.webp"
           media="(max-width: 767px)"
         />
         <link
           rel="preload"
           as="image"
-          href="/desktop-background.webp"
+          href="/desktop-bg.webp"
           media="(min-width: 768px)"
         />
       </head>
