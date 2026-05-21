@@ -1,13 +1,57 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function InvitationCard() {
   const [isOpen, setIsOpen] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const shouldResumeAudioRef = useRef(false);
 
   const faceClass =
     "absolute inset-0 grid place-items-center overflow-hidden rounded-[28px] bg-[#FFFFF9] shadow-[0_4px_4px_rgba(0,0,0,0.25),0_4px_8.5px_rgba(0,0,0,0.25)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]";
+
+  useEffect(() => {
+    const stopAudio = () => {
+      const audio = audioRef.current;
+
+      if (!audio) {
+        return;
+      }
+
+      audio.pause();
+      audio.currentTime = 0;
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "hidden") {
+        const audio = audioRef.current;
+
+        shouldResumeAudioRef.current = Boolean(audio && !audio.paused);
+        stopAudio();
+        return;
+      }
+
+      if (document.visibilityState === "visible" && shouldResumeAudioRef.current) {
+        shouldResumeAudioRef.current = false;
+        void audioRef.current?.play().catch(() => {});
+      }
+    };
+
+    const handlePageHide = () => {
+      const audio = audioRef.current;
+
+      shouldResumeAudioRef.current = Boolean(audio && !audio.paused);
+      stopAudio();
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("pagehide", handlePageHide);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("pagehide", handlePageHide);
+    };
+  }, []);
 
   const handleCardClick = () => {
     setIsOpen((value) => !value);
