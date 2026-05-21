@@ -45,7 +45,7 @@ export function InvitationCard() {
                 Аружан
               </p>
             </span>
-            <p className="[font-family:Georgia,Times_New_Roman,serif] text-[9px] text-[#5F3436]/45 md:text-xs mb-4 md:mb-8">
+            <p className="[font-family:Georgia,Times_New_Roman,serif] text-[9px] text-[#5F3436]/45 md:text-[20px] mb-4 md:mb-8">
               ашу үшін басыңыз
             </p>
           </span>
