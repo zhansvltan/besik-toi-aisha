@@ -120,7 +120,7 @@ export function InvitationCard() {
                 </p>
               </div>
               <p className="m-0 [font-family:var(--font-bickham-script)] text-[48px] font-normal leading-[0.92] tracking-normal text-[#921512] md:text-[80px]">
-                1 маусым | 14:00
+                1 маусым <span className='font-italic text-[19px] md:text-[36px]'>|</span> 14:00
               </p>
 
               <p className="m-0 text-[16px] font-normal leading-[0.92] tracking-normal text-[#634445] md:text-[26px]">
