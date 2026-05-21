@@ -72,12 +72,12 @@ export default function RootLayout({
           alt=""
         />
         <img
-          className="pointer-events-none block absolute z-30 right-[28%] -bottom-6 w-[60%] select-none md:w-[40%] md:hidden"
+          className="pointer-events-none block absolute z-30 right-[23%] -bottom-6 w-[60%] select-none md:w-[40%] md:hidden"
           src="/right-corner-mobile-pl.webp"
           alt=""
         /> 
         <img
-          className="pointer-events-none block absolute z-30 -right-4 -bottom-6 w-[48%] select-none md:w-[40%] md:hidden"
+          className="pointer-events-none block absolute z-30 -right-9 -bottom-6 w-[48%] select-none md:w-[40%] md:hidden"
           src="/right-corner-mobile-pr.webp"
           alt=""
         />
