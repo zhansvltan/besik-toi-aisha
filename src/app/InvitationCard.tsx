@@ -83,10 +83,10 @@ export function InvitationCard() {
             <div></div>
             <span className="flex flex-col items-end text-[#5F3436]">
               <p className="text-end m-0 [font-family:var(--font-cormorant-infant)] text-[48px] font-light uppercase leading-[0.92] tracking-normal md:text-[80px]">
-                ҚЫЗ ҰЗАТУ
+                БЕСІК ТОЙ
               </p>
               <p className="m-0 -mt-8 pr-2 text-[#921512] [font-family:var(--font-bickham-script)] text-[80px] font-normal leading-[0.92] tracking-normal md:text-[128px] md:-mt-14 md:pr-4">
-                Аружан
+                Аиша
               </p>
             </span>
             <p className="[font-family:Georgia,Times_New_Roman,serif] text-[9px] text-[#5F3436]/45 md:text-[20px] mb-4 md:mb-8">
@@ -99,10 +99,10 @@ export function InvitationCard() {
               <div className="flex flex-col items-center gap-[16px] md:gap-[21px]">
                 <span className="flex flex-col items-center md:items-end ">
                   <p className="m-0 text-[32px] font-light uppercase leading-[0.92] tracking-normal text-[#5F3436] md:text-[48px]">
-                    ҚЫЗ ҰЗАТУ
+                    БЕСІК ТОЙ
                   </p>
                   <p className="m-0 -mt-4 [font-family:var(--font-bickham-script)] text-[48px] font-normal leading-[0.92] tracking-normal text-[#921512] md:text-[64px] md:-mt-6 md:pr-2">
-                    Аружан
+                    Аиша
                   </p>
                 </span>
                 <p className="m-0 text-[16px] font-light leading-none tracking-normal text-[#634445] md:text-[26px]">
@@ -112,7 +112,7 @@ export function InvitationCard() {
                   Сіздерді қызымыз
                   <br />
                   <span className="font-bold text-[#634445]">
-                    Аружанның ұзату тойына
+                    Аишаның бесік тойына
                   </span>
                   <br />
                   арналған ақ дастарханымыздың <br /> қадірлі қонағы болуға
@@ -120,12 +120,12 @@ export function InvitationCard() {
                 </p>
               </div>
               <p className="m-0 [font-family:var(--font-bickham-script)] text-[48px] font-normal leading-[0.92] tracking-normal text-[#921512] md:text-[80px]">
-                1 тамыз <span className='font-italic text-[19px] md:text-[36px]'>|</span> 14:00
+                21 маусым
               </p>
 
               <p className="m-0 text-[16px] font-normal leading-[0.92] tracking-normal text-[#634445] md:text-[26px]">
-                Қарағанды қаласы <br />
-                «Garden Hall» мейрамханасы
+                Шымкент қаласы <br />
+                «La melly» мейрамханасы
               </p>
 
               <div>
@@ -133,7 +133,7 @@ export function InvitationCard() {
                   Ізгі ниетпен,
                 </p>
                 <p className="m-0 -mt-1 [font-family:var(--font-bickham-script)] text-[24px] font-normal leading-[0.92] tracking-normal text-[#921512] md:text-[48px] md:-mt-2">
-                  Жарас — Гүлбақыт
+                  Самиқұловтар әулеті
                 </p>
               </div>
             </span>
