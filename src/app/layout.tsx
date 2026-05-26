@@ -27,7 +27,7 @@ const bickhamScript = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Аружан - Ұзату той",
+  title: "Аиша - Бесік той",
 };
 
 export default function RootLayout({
